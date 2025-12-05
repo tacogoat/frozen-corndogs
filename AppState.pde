@@ -1,0 +1,7 @@
+enum AppState {
+  MAP,
+  SIDEBAR,
+  ADD_PORTAL,
+  REMOVE_PORTAL,
+  CLOSE_APP
+}
