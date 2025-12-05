@@ -151,6 +151,7 @@ void keyPressed() {
       }
       if (editing && key != CODED) aMenu.editValue();
       if ((key == BACKSPACE && !editing) || keyCodeIsEsc()) {
+        editing = false;
         state = AppState.SIDEBAR;
         focusedItem = 0;
       }
