@@ -15,10 +15,6 @@ class Sidebar {
     
     u.drawText("1: save to file\n2: load from file\n3: toggle portal shape\n0: zoom to center\na: add portal", 20, 255, 0, 0);
     
-    if (state == AppState.SIDEBAR || state == AppState.MAP) {
-      if (focusedItem < 0) focusedItem = 0;
-      if (focusedItem >= m.portals.length) focusedItem = m.portals.length - 1;
-    }
     for (int i = 0; i < m.portals.length; i++) {
       Portal p = m.portals[i];
       color textColor = 255;

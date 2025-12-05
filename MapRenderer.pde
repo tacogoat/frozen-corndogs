@@ -6,6 +6,11 @@ class MapRenderer {
   }
   
   void drawMap() {
+    if (state == AppState.MAP || state == AppState.SIDEBAR) {
+      if (focusedItem < 0) focusedItem = 0;
+      if (focusedItem >= m.portals.length) focusedItem = m.portals.length - 1;
+    }
+    
     PVector mapCenter = this.map2screen(new PVector(0, 0));
     stroke(55);
     strokeWeight(1);
