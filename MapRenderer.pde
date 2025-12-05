@@ -21,7 +21,7 @@ class MapRenderer {
     for (int i = 0; i < m.portals.length; i++) {
       Portal p = m.portals[i];
       color portalColor = color(255, 0, 255);
-      if (i == focusedItem) portalColor = color(255, 0, 0);
+      if (i == focusedItem && (state == AppState.MAP || state == AppState.SIDEBAR)) portalColor = color(255, 0, 0);
       PVector screenCoords = this.map2screen(new PVector(p.x, p.z));
       int xs = (int) screenCoords.x;
       int zs = (int) screenCoords.y;
